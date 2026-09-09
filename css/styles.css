@@ -46,7 +46,7 @@ img {
 
     /* Lab06 */
     --font-stack: system-ui, 'Segoe UI', Tahoma, sans-serif;
-    --color-surface-alt: #f1f5f9;
+    --color-surface-alt: #fadaee;
     --radius-md: 8px;
 
     /* Lab07 */
@@ -75,6 +75,7 @@ p { margin-bottom: var(--space-md); }
 p:last-child { margin-bottom: 0; }
 
 a { color: var(--color-accent); }
+ul { padding-left: var(--space-lg); }
     
 
 /* ==========================
