@@ -80,7 +80,12 @@ ul { padding-left: var(--space-lg); }
 
 /* ==========================
    4. LAYOUT
+   Breakpoints used in this file:
+     768px  — tablet and larger
+   (CSS variables cannot be used inside @media conditions,
+    so breakpoints are documented here instead of tokenized.)
    ========================== */
+
 body {
     max-width: var(--page-width);
     margin: 0 auto;
@@ -150,17 +155,17 @@ header {
 /* Lab07 */
 .skills-grid {
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     gap: var(--space-md);
 }
 .skill-card {
-    flex: 1;
-    min-width: 12rem;
     padding: var(--space-md);
     background-color: var(--color-surface-alt);
     border-radius: var(--radius-md);
 }
+
 .about {
     display: flex;
     flex-wrap: wrap;
@@ -173,10 +178,16 @@ header {
 
 .project-list {
     list-style: none;
-    display: flex;
-    flex-direction: column;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: var(--space-lg);
 }
+@media (min-width: 768px) {
+    .project-list { grid-template-columns: 1fr 1fr; }
+    .project-card.featured { grid-column: span 2; }
+}
+
 .project-card {
     padding: var(--space-lg);
     background-color: var(--color-surface);
@@ -185,13 +196,13 @@ header {
     box-shadow: var(--shadow-sm);
 }
  
-#resume img {
+resume img {
     max-width: 320px;
     border: 1px solid var(--color-rule);
-    border-radius: 4px;
+    border-radius: 4 px;
     transition: opacity var(--transition-fast);
 }
 
-#resume a:hover img {
+resume a:hover img {
     opacity: 0.85;
 }
