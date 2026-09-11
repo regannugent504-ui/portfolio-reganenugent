@@ -11,29 +11,25 @@
     <a href="index.html" class="logo">Regan Nugent</a>
     <div class="nav-links">
         <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
         <a href="resume.html">Resume</a>
         <a href="about.html">About</a>
         <a href="index.html#contact">Contact</a>
+    
     </div>
 </nav>
 
 <header>
     <div class="header-text">
         <h1>Regan Nugent</h1>
-        <p>I'm a junior at TCU double majoring in Strategic Communications and Digital Culture and Data Analytics. Welcome to my portfolio, where you can explore my work, experience, and projects</p>
+        <p>I'm a junior at TCU double majoring in Strategic Communications and Digital Culture and Data Analytics. Welcome to my portfolio, where you can explore my work, experience, and projects.</p>
     </div>
     <div class="header-pic">
         <img src="images/IMG_5962.JPG">
     </div>
 </header>
 
-<section class="about">
-    <div class="about-image">
-    
-    <div class="about-text">
-        <h2 id="about">About Me</h2>
-        <p>Your revised About copy goes here.</p>
-    </div>
+
 </section>
     
 
@@ -69,13 +65,18 @@
             <p>Director of Public Relations for Alpha Delta Pi at TCU</p>
         </li>
     </ul>
+
     <section id="Projects">
     <h2>Projects</h2>
     <ul class="project-list">
         <li class="project-card">
-            <h3>Personal Portfolio</h3>
+            <h3>Preview My Work</h3>
             <p><time datetime="2026-08">August 2026</time></p>
-            <p>The site you are reading is built from scratch in HTML and CSS.</p>
+            <p><ul>
+                    <li><a href="https://canva.link/bxhvxd867bu0gt3" target="_blank" rel="noopener">Epstein's Email Network</a> — a website I created for my Digital Humanities final.</li>
+                    <li><a href="https://docs.google.com/document/d/1gf63WMeRjJGaUbNBQQLtnsUzKTRs3pFx/edit?usp=sharing&ouid=109647484414447966018&rtpof=true&sd=true" target="_blank" rel="noopener">Shrek: the Unexpected Revenge Piece </a> — writing sample from my English class.</li>
+                    <li><a href="https://regannugent504.wixsite.com/my-site-1" target="_blank" rel="noopener">Regan Nugent's Website</a> — Another personal Website I had to create for my Design class.</li>
+                </ul>
         </li>
     </ul>
 
@@ -92,23 +93,25 @@
 <p><strong>Available for internships starting January 2027.</strong></p>
 </section>
 
-<section class="about">
-    <div class="about-image">
-        <!-- your existing Lab 04 <figure> or <img> goes here -->
-        <img src="images/IMG_0641.JPG" alt="Product that I got for my chapter during my term as Director of Public Relations">
-        <figcaption>Product that I got for my chapter during my term as Director of Public Relations</figcaption>
-
-    </div>
-    <div class="about-text">
-        <h2 id="about">About Me</h2>
-    </div>
-</section>
-
-
-<a href="about.html">Read about me</a>
-    <footer>
+<section class="contact" id="contact">
+    <h2>Let's get in touch!</h2>
+    <p>Feel free to reach out to me to connect. I love meeting new people!</p>
+    <form class="contact-form" onsubmit="event.preventDefault(); alert('This is a demo form — connect it to a backend or a service like Formspree to make it work.');">
+      <div>
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here..."></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
         <p>&copy; 2026 Regan Nugent</p>
     </footer>
+
+
 </body>
 </html>
 
