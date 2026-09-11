@@ -4,9 +4,300 @@
     <link rel="stylesheet" href="css/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regan Nugent</title>
+    <title>Regan Nugent</title>   
 </head>
+<nav class="nav-container">
+    <a href="index.html" class="logo">Regan Nugent</a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="about.html">About</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+</nav>
+
+<style>
+  :root {
+    --accent: #2b2b2b;
+    --muted: #6b6b6b;
+    --bg: #ffffff;
+    --card-bg: #fadaee;
+    --border: #e2e2e0;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: var(--accent);
+    background: var(--bg);
+  }
+
+  /* ---------- NAV ---------- */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 6%;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 10;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--accent);
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+  }
+
+  nav a:hover { color: var(--muted); }
+
+  /* ---------- HERO / PAGE TITLE ---------- */
+  .page-title {
+    text-align: center;
+    padding: 60px 6% 20px;
+  }
+
+  .page-title h1 {
+    font-size: 2.5rem;
+    margin: 0 0 10px;
+  }
+
+  .page-title p {
+    color: var(--muted);
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  /* ---------- PROJECT GRID ---------- */
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 6% 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  }
+
+  .project-card .thumb {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #d8d8d5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  .project-card .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .project-card .info {
+    padding: 16px 18px;
+  }
+
+  .project-card .info .category {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    margin: 0 0 6px;
+  }
+
+  .project-card .info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  /* ---------- CONTACT SECTION ---------- */
+  .contact {
+    background: var(--card-bg);
+    padding: 70px 6%;
+    text-align: center;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+    margin: 0 0 12px;
+  }
+
+  .contact p {
+    color: var(--muted);
+    max-width: 500px;
+    margin: 0 auto 30px;
+  }
+
+  form.contact-form {
+    max-width: 480px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+  }
+
+  form.contact-form label {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  form.contact-form input,
+  form.contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background: #fff;
+  }
+
+  form.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  form.contact-form button {
+    align-self: center;
+    padding: 12px 40px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  form.contact-form button:hover {
+    background: #444;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 24px 6%;
+    font-size: 0.8rem;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+  }
+
+  footer a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+
+  @media (max-width: 600px) {
+    header { flex-direction: column; gap: 14px; }
+    nav ul { gap: 18px; flex-wrap: wrap; justify-content: center; }
+    .page-title h1 { font-size: 1.9rem; }
+  }
+</style>
+
 <body>
-    
+    <section class="page-title" id="projects">
+    <h1>Projects</h1>
+    <p>Click on the project you want to explore.</p>
+  </section>
+
+  <section class="projects">
+    <div class="project-card">
+      <div class="thumb"><img src="images/News_Release.png" download="News-Release.pdf" alt="Writing sample thumbnail" onerror="this.style.display='none'; this.parentElement.innerHTML='Image placeholder';"></div>
+      <div class="info">
+        <p class="category">Writing Sample</p>
+        <h3>Press Release</h3>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="thumb"><img src="" alt="Advertising campaign thumbnail" onerror="this.style.display='none'; this.parentElement.innerHTML='Image placeholder';"></div>
+      <div class="info">
+        <p class="category">Advertising Campaign</p>
+        <h3>Forever 21 Rebrand</h3>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="thumb"><img src="" alt="Social media audit thumbnail" onerror="this.style.display='none'; this.parentElement.innerHTML='Image placeholder';"></div>
+      <div class="info">
+        <p class="category">Social Media Audit</p>
+        <h3>Social Media Audit on Plainfield, Indiana</h3>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="thumb"><img src="" alt="Project four thumbnail" onerror="this.style.display='none'; this.parentElement.innerHTML='Image placeholder';"></div>
+      <div class="info">
+        <p class="category">Category</p>
+        <h3>Project Title Four</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Let's get in touch!</h2>
+    <p>Feel free to reach out to me to connect. I love meeting new people!</p>
+    <form class="contact-form" onsubmit="event.preventDefault(); alert('This is a demo form — connect it to a backend or a service like Formspree to make it work.');">
+      <div>
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here..."></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+</body>
+</html>
 </body>
 </html>
