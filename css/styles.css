@@ -207,4 +207,70 @@ resume a:hover img {
     opacity: 0.85;
 }
 
-/* Projects Page Layout */
+/* ---------- CONTACT SECTION ---------- */
+  .contact {
+    background: var(--card-bg);
+    padding: 70px 6%;
+    text-align: center;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+    margin: 0 0 12px;
+  }
+
+  .contact p {
+    color: var(--muted);
+    max-width: 500px;
+    margin: 0 auto 30px;
+  }
+
+  form.contact-form {
+    max-width: 480px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+  }
+
+  form.contact-form label {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  form.contact-form input,
+  form.contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background: #fff;
+  }
+
+  form.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  form.contact-form button {
+    align-self: center;
+    padding: 12px 40px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  form.contact-form button:hover {
+    background: #444;
+  }
