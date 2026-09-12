@@ -418,3 +418,80 @@ footer {
   text-align: center;
 }
 
+/* Force the two Career Highlights boxes side by side */
+.highlights-row {
+    display: flex;
+    gap: 10px; 
+    align-items: flex-start;
+}
+
+.highlights-row .project-list {
+    flex: 1;
+    margin: 0;
+}
+.highlights-row {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;   /* changed from flex-start */
+}
+
+.highlights-row .project-list {
+    flex: 1;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.highlights-row .project-card {
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.highlights-row .project-card .header-pic {
+    margin-top: auto;   /* pushes the image to the bottom so both cards' images line up */
+}
+
+.highlights-row .project-card img {
+    width: 100%;
+    height: 200px;          /* pick a height that fits your design */
+    object-fit: cover;      /* crops the image to fill that height without distorting */
+    display: block;
+}
+.highlights-row .project-list {
+    flex: 1;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;           /* new */
+}
+
+.highlights-row .project-card {
+    width: 100%;              /* new — overrides any fixed width from .project-card elsewhere */
+    max-width: none;          /* new — in case a max-width is set too */
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;             /* add some breathing room inside the card */
+}
+
+.highlights-row .project-card .header-pic {
+    margin-top: auto;
+}
+
+.highlights-row .project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;   /* changed from cover — shows the whole image, no cropping */
+    background-color: #f4f4f4;  /* fills empty space around the image so it doesn't look bare */
+    display: block;
+    border-radius: 6px;
+}
+.highlights-row .project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
