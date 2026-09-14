@@ -495,3 +495,14 @@ footer {
     display: block;
     border-radius: 6px;
 }
+a.project-card {
+  text-decoration: none;
+  color: inherit;
+}
+#contact a {
+    color: #473f3f;
+}
+
+#contact a:hover {
+    color: #your-hover-color-here;
+}
