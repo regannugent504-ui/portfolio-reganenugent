@@ -22,7 +22,7 @@
     <div class="header-text">
         <h1>Resume</h1>
     <section id="resume">
-    <a href="files/Regan-Nugent-Resume.pdf" download="Regan-Nugent-Resume.pdf" aria-label="Download my resume as a PDF">
+    <a href="files/" download="Regan-Nugent-Resume.pdf" aria-label="Download my resume as a PDF">
         <div class="header-pic">
         <img src="images/Regan_Nugent_Resume.jpeg">
         </div>
@@ -33,8 +33,7 @@
 <section class="contact" id="contact">
     <h2>Let's get in touch!</h2>
     <p>Feel free to reach out to me to connect. I love meeting new people!</p>
-    <form class="contact-form" onsubmit="event.preventDefault(); alert('This is a demo form — connect it to a backend or a service like Formspree to make it work.');">
-      <div>
+    <form class="contact-form" action="https://formspree.io/f/xgaejpdp" method="POST">
         <label for="email">Email *</label>
         <input type="email" id="email" name="email" required placeholder="you@example.com">
       </div>
@@ -44,7 +43,8 @@
       </div>
       <button type="submit">Submit</button>
     </form>
-  </section>
+</section>
+
   <footer>
     <p>&copy; 2026 Regan Nugent · Personal Portfolio</p>
 </footer>
